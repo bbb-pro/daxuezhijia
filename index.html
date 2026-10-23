@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="大学之家收录教育部 2025 年《全国高等学校名单》全部 2919 所普通高校（本科 1365 + 专科 1554），覆盖 99.5% 官方网址，支持按省份筛选与 985 / 211 / 双一流标签识别，帮你一键直达目标高校官网。">
 <title>大学之家 · 全国高校导航</title>
 <style>
 :root{
@@ -28,6 +29,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .cap{flex:0 0 auto;padding:6px 14px;border:1px solid var(--border-2);border-radius:999px;font-size:13px;background:#fff;color:var(--text-2);cursor:pointer;white-space:nowrap;transition:all .15s;}
 .cap:hover{border-color:var(--brand);color:var(--brand);}
 .cap.active{background:var(--brand);color:#fff;border-color:var(--brand);}
+.hero{max-width:1200px;margin:0 auto;padding:26px 20px 4px;}
+.hero h1{font-size:25px;margin:0;color:var(--brand);letter-spacing:1px;font-weight:700;}
+.hero .slogan{font-size:17px;font-weight:600;color:var(--text);margin:8px 0 12px;}
+.hero .desc{font-size:14px;color:var(--text-2);line-height:1.85;margin:0;max-width:780px;}
 main{max-width:1200px;margin:0 auto;padding:20px;}
 .prov{margin-bottom:34px;scroll-margin-top:calc(var(--header-h,170px) + 12px);}
 .prov h2{font-size:18px;margin:0 0 14px;display:flex;align-items:center;gap:10px;color:var(--text);}
@@ -82,6 +87,11 @@ footer{text-align:center;color:var(--text-3);font-size:12px;padding:30px;line-he
   </div>
   <div class="caps" id="caps"></div>
 </header>
+<section class="hero">
+  <h1>大学之家</h1>
+  <p class="slogan">全国高校，一键直达</p>
+  <p class="desc">收录教育部 2025 年《全国高等学校名单》全部 2919 所普通高校（本科 1365 + 专科 1554），覆盖 99.5% 官方网址，支持按省份筛选与 985 / 211 / 双一流标签识别，帮你一键直达目标高校官网。</p>
+</section>
 <main id="main"></main>
 <footer>
   数据来源：教育部《全国高等学校名单》（截至2025年6月20日）· 共 <span id="total">0</span> 所<br>
