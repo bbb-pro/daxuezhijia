@@ -1,0 +1,11 @@
+# 数据源与中间产物（体积大，不入库；可由 tools/ 重新生成）
+data/*.xls
+data/open_edu.json
+data/collegeschat.json
+data/missing_web.json
+data/parsed_raw.json
+
+# 保留 data/website_patch.json —— 手动补全的官网映射，是数据管线的关键输入
+
+# 项目私有记忆目录（不公开）
+.workbuddy/
