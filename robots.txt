@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bbb-pro.github.io/daxuezhijia/sitemap.xml
+Sitemap: https://057300.xyz/daxuezhijia/sitemap.xml
