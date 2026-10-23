@@ -48,6 +48,8 @@ main{max-width:1200px;margin:0 auto;padding:20px;}
 .prov{margin-bottom:34px;scroll-margin-top:calc(var(--header-h,170px) + 12px);}
 .prov h2{font-size:18px;margin:0 0 14px;display:flex;align-items:center;gap:10px;color:var(--text);}
 .prov h2 .cnt{font-size:13px;font-weight:400;color:var(--text-3);background:var(--bg);padding:2px 10px;border-radius:999px;}
+.prov h2 .prov-link{color:var(--text);text-decoration:none;}
+.prov h2 .prov-link:hover{color:var(--brand);text-decoration:underline;}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;}
 .card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px;cursor:pointer;transition:box-shadow .15s,border-color .15s;overflow:hidden;}
 .card:hover{border-color:var(--brand);box-shadow:0 4px 16px rgba(12,68,124,.10);}
@@ -143,6 +145,7 @@ s.parentNode.insertBefore(hm, s);
 <div class="toast" id="toast"></div>
 <script>
 let DATA=null;
+const PROV_SLUG={'北京市':'beijing','天津市':'tianjin','河北省':'hebei','山西省':'shanxi','内蒙古自治区':'neimenggu','辽宁省':'liaoning','吉林省':'jilin','黑龙江省':'heilongjiang','上海市':'shanghai','江苏省':'jiangsu','浙江省':'zhejiang','安徽省':'anhui','福建省':'fujian','江西省':'jiangxi','山东省':'shandong','河南省':'henan','湖北省':'hubei','湖南省':'hunan','广东省':'guangdong','广西壮族自治区':'guangxi','海南省':'hainan','重庆市':'chongqing','四川省':'sichuan','贵州省':'guizhou','云南省':'yunnan','西藏自治区':'xizang','陕西省':'shaanxi','甘肃省':'gansu','青海省':'qinghai','宁夏回族自治区':'ningxia','新疆维吾尔自治区':'xinjiang'};
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function tagHtml(t){
   if(t==='本科')return '<span class="tag lvl bachelor">本科</span>';
@@ -187,7 +190,7 @@ function render(){
       return true;
     });
     if(!schools.length)continue;
-    html+='<section class="prov" id="prov-'+encodeURIComponent(p.name)+'"><h2>'+esc(p.name)+'<span class="cnt">'+schools.length+' 所</span></h2><div class="grid">'+schools.map(cardHtml).join('')+'</div></section>';
+    html+='<section class="prov" id="prov-'+encodeURIComponent(p.name)+'"><h2><a class="prov-link" href="prov/'+PROV_SLUG[p.name]+'.html">'+esc(p.name)+'</a><span class="cnt">'+schools.length+' 所</span></h2><div class="grid">'+schools.map(cardHtml).join('')+'</div></section>';
   }
   main.innerHTML=html||'<p style="text-align:center;color:var(--text-3);padding:40px;">没有匹配的院校</p>';
   document.getElementById('total').textContent=DATA.meta.total;
